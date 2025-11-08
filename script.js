@@ -11,3 +11,8 @@ const Book = function(src, name, author, pages, status) {
     this.pages = pages;
     this.status = status;
 }
+
+const addBook = function addBookToTheLibrary(src, name, author, pages, status) {
+    const newBook = new Book(src, name, author, `${pages} pages`, status);
+    myLibrary.push(newBook);
+}
