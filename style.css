@@ -29,5 +29,6 @@ body {
         width: 250px;
         justify-items: center;
         padding: 1rem;
+        background-color: aqua;
     }
 }
