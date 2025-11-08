@@ -22,10 +22,11 @@ body {
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     align-items: center;
+    gap: 18px;
 
     & .book__card {
         display: grid;
-        width: 200px;
+        width: 250px;
         justify-items: center;
         padding: 1rem;
     }
