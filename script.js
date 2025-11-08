@@ -42,3 +42,10 @@ const displayBooks = function displayBooksToTheLibrary() {
     });
 
 }
+
+addBook('./hobbit.jpg','Joker','Joker', 635, 'not read');
+addBook('./hobbit.jpg','Batman','Batman', 255, 'read');
+addBook('./hobbit.jpg','Batman','Batman', 255, 'read');
+
+
+displayBooks();
