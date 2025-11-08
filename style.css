@@ -23,4 +23,10 @@ body {
     justify-items: center;
     align-items: center;
 
+    & .book__card {
+        display: grid;
+        width: 200px;
+        justify-items: center;
+        padding: 1rem;
+    }
 }
