@@ -74,9 +74,12 @@ const displayBooks = function displayBooksToTheLibrary() {
 
 }
 
-addBook('./hobbit.jpg','Joker','Joker', 635, 'not read');
-addBook('./hobbit.jpg','Batman','Batman', 255, 'read');
-addBook('./hobbit.jpg','Batman','Batman', 255, 'read');
+addBook('https://i.ebayimg.com/images/g/F5sAAOSwII9mYysy/s-l1200.jpg','Joker','Joker', 635, 'not read');
 
+addBook('https://thecomicmint.com/cdn/shop/files/STL357563_1024x.jpg?v=1738082380','Batman','Batman', 255, 'read');
+
+addBook('./batman2.avif','Batman','Batman', 255, 'read');
+
+addBook('https://preview.redd.it/cover-batman-issue-1-variant-cover-by-nick-dragotta-v0-5wrk8za3gdqf1.jpeg?width=1080&crop=smart&auto=webp&s=16c96b14debfdf0eb585f570a5c561b3a3a7102c','Batman','Batman', 255, 'read');
 
 displayBooks();
