@@ -6,6 +6,7 @@ body {
 }
 
 .header__container {
+    height: 85px;
     grid-column: 1 / 3;
     display: flex;
     justify-content: space-around;
@@ -26,7 +27,7 @@ body {
 
     & .book__card {
         display: grid;
-        width: 250px;
+        width: 500px;
         justify-items: center;
         padding: 1rem;
         background-color: aqua;
