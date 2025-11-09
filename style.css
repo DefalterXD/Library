@@ -29,7 +29,31 @@ body {
         display: grid;
         width: 500px;
         justify-items: center;
-        padding: 1rem;
+        padding: 1em;
+        border-radius: 18px;
         background-color: aqua;
+        gap: 12px;
+
+        & img {
+            border-radius: 16px;
+            height: 600px;
+        }
+
+        & .book__info {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        & .reader__info {
+            display: flex;
+            gap: 32px;
+        }
+
+        & .edit__btn {
+            padding: 0.2em 2em;
+            border-radius: 12px;
+            border: none;
+        }
     }
 }
