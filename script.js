@@ -5,6 +5,7 @@ const Book = function(src, name, author, pages, status) {
     if(!new.target) {
         throw Error("Use 'new' to create an object");
     }
+    this.id = crypto.randomUUID();
     this.src = src;
     this.name = name;
     this.author = author;
