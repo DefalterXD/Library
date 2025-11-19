@@ -122,7 +122,63 @@ const editBooks = function editBooksFromTheLibrary(bookCard, src, name, author, 
 
 }
 
-addBook('https://i.ebayimg.com/images/g/F5sAAOSwII9mYysy/s-l1200.jpg','Joker','Joker', 635, 'not read');
+document.addEventListener('click', (event) => {
+    const btnClassName = event.target.className;
+    switch (btnClassName) {
+        case 'add__btn':
+            addBookModal.showModal();
+            break;
+
+        case 'edit__btn':
+            editBookModal.showModal();
+            bookCardEdit = event.target.closest('div[data-id]');
+            break;
+
+        case 'status__btn':
+            const bookCardStatus = event.target.closest('div[data-id]');
+            const bookStatus = event.target.previousSibling.lastChild;
+            const foundedCardStatus = myLibrary.find((obj) => obj.id === bookCardStatus.dataset.id);
+            foundedCardStatus.bookStatus(bookStatus);
+            break;
+
+        case 'delete__btn':
+            const bookCardDelete = event.target.closest('div[data-id]');
+            const foundedCardToDelete =
+                myLibrary.find((obj) => obj.id === bookCardDelete.dataset.id);
+            const index = myLibrary.indexOf(foundedCardToDelete);
+            myLibrary.splice(index, 1);
+            deleteBooks(bookCardDelete);
+            break;
+
+        case 'close__btn':
+            addBookModal.close();
+            editBookModal.close();
+            break;
+
+        case 'add__btn modal':
+            const maxAddFormInputs = 4;
+            const addBookForm =
+                [...event.target.closest('#add__book').querySelectorAll('input')]
+                .map((element, index) => (index === maxAddFormInputs) ? element.checked : element.value);
+
+            if (addBookForm.includes('')) {
+                addBook();
+            }
+            else {
+                addBook(...addBookForm);
+            }
+            break;
+
+        case 'edit__btn modal':
+            const editBookForm =
+                [...event.target.closest('#edit__book').querySelectorAll('input')]
+                .map((element) => element.value);
+                
+            editBooks(bookCardEdit, ...editBookForm);
+            break;
+    }
+});
+
 
 addBook('https://thecomicmint.com/cdn/shop/files/STL357563_1024x.jpg?v=1738082380','Batman','Batman', 255, 'read');
 
