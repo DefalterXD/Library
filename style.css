@@ -1,3 +1,9 @@
+:root {
+    --main-btn: #e0e0e0;
+    --status-btn: rgb(0, 140, 255);
+    --delete-btn: rgb(192, 17, 17);
+}
+
 body {
     min-height: 100dvh;
     display: grid;
