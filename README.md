@@ -18,7 +18,7 @@ The other functions which can allows to manipulate with those books was mainly u
 
 With form for adding books if the field or all fields is empty then the book would be created with default parameters, which was declared at corresponding function.
 
-And for editing books I add condition for each field wether it's empty or not. So it could apply changes or not depending on that condition.
+And for editing books I add condition for each field whether it's empty or not. So it could apply changes or not depending on that condition.
 
 ## Lessons Learned:
 
