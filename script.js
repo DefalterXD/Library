@@ -101,10 +101,24 @@ const addBook = function addBookToTheLibrary(src = 'placeholder.avif', name = 'U
     displayBooks(newBook);
 }
 
-const displayBooks = function displayBooksToTheLibrary() {
-    myLibrary.forEach((book) => {
-        book.createCard();
-    });
+const displayBooks = function displayBooksToTheLibrary(bookCard) {
+    bookCard.createCard();
+}
+
+const deleteBooks = function deleteBooksFromTheLibrary(bookCard) {
+    bookCard.remove();
+}
+
+const editBooks = function editBooksFromTheLibrary(bookCard, src, name, author, pages) {
+    const bookCardImg = bookCard.querySelector('img');
+    const bookCardName = bookCard.querySelector('.book__info h2');
+    const bookCardAuthor = bookCard.querySelector('.book__info h4');
+    const bookCardPages = bookCard.querySelector('.reader__info div').lastChild;
+
+    bookCardImg.src = (src != '') ? src : bookCardImg.src;
+    bookCardName.textContent = (name != '') ? name : bookCardName.textContent;
+    bookCardAuthor.textContent = (author != '') ? `by ${author}` : bookCardAuthor.textContent;
+    bookCardPages.textContent = (pages != '') ? `${pages} pages` : bookCardPages.textContent;
 
 }
 
