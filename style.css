@@ -87,9 +87,9 @@ body {
         }
 
         & .btn__container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
         }
 
         & .status__btn {
@@ -125,13 +125,13 @@ body {
     align-self: center;
     min-width: 50%;
     padding: 1em;
-    
+
     & form {
         position: relative;
         display: grid;
         gap: 6px;
 
-        & label, 
+        & label,
         & .status__title {
             font-size: 1.1rem;
         }
@@ -152,7 +152,7 @@ body {
     & h1 {
         text-align: center;
     }
-    
+
     & button {
         background-color: transparent;
         border: 1px solid black;
@@ -177,18 +177,18 @@ body {
         right: 1%;
     }
 
-    
+
     & button:last-child:hover {
         background-color: var(--delete-btn);
         color: #fff;
         transition: background-color 0.2s;
     }
-    
+
     & button:last-child::before {
         content: 'X';
         padding: 0 0.5em;
     }
-    
+
 }
 
 #edit__book form button:last-child {
