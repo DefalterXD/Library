@@ -16,7 +16,7 @@ const Book = function (src, name, author, pages, status) {
     this.name = name;
     this.author = author;
     this.pages = pages;
-    this.status = status;
+    this.status = (status) ? 'read' : 'not read';
 }
 
 Book.prototype = {
