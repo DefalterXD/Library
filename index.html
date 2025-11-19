@@ -24,6 +24,29 @@
     <main class="main__container">
         
     </main>
+
+    <dialog id="add__book">
+        <h1 class="modal__title">Add Book</h1>
+        <form method="dialog">
+            <label for="image">Image URL:</label>
+            <input type="text" id="image" name="url" autocomplete="off">
+            <label for="title">Book Title:</label>
+            <input type="text" id="title" name="title" autocomplete="off">
+            <label for="author">Book Author:</label>
+            <input type="text" id="author" name="author" autocomplete="off">
+            <label for="pages">Book Pages:</label>
+            <input type="tel" id="pages" name="pages" autocomplete="off">
+            <div class="status__container">
+                <p class="status__title">Status:</p>
+                <input type="checkbox" name="status" id="status">
+                <label for="status" value="off">Do you read it?</label>
+            </div>
+            <div class="btn__container">
+                <button type="submit" class="add__btn modal">Add Book</button>
+                <button type="button" class="close__btn"autofocus></button>
+            </div>
+        </form>
+    </dialog>
     <script src="script.js"></script>
 </body>
 
