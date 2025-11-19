@@ -78,13 +78,42 @@ body {
 
         & .reader__info {
             display: flex;
-            gap: 32px;
+            gap: 64px;
+            font-size: 1.2rem;
+        }
+
+        & .status__info {
+            min-width: 7ch;
+        }
+
+        & .btn__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        }
+
+        & .status__btn {
+            padding: 0.6em 0.8em;
+            border-radius: 12px;
+            border: none;
+            background-color: var(--status-btn);
+            color: #fff;
+
         }
 
         & .edit__btn {
-            padding: 0.2em 2em;
+            padding: 0.6em 2em;
             border-radius: 12px;
             border: none;
+            background-color: var(--main-btn);
+        }
+
+        & .delete__btn {
+            padding: 0.6em 2em;
+            border-radius: 12px;
+            border: none;
+            background-color: var(--delete-btn);
+            color: #fff;
         }
     }
 }
