@@ -117,3 +117,85 @@ body {
         }
     }
 }
+
+#add__book,
+#edit__book {
+
+    justify-self: center;
+    align-self: center;
+    min-width: 50%;
+    padding: 1em;
+    
+    & form {
+        position: relative;
+        display: grid;
+        gap: 6px;
+
+        & label, 
+        & .status__title {
+            font-size: 1.1rem;
+        }
+
+        input {
+            border: 1px solid black;
+            border-radius: 12px;
+            padding: 0.1em 0.6em;
+            font-size: 1.2rem;
+        }
+    }
+
+    & .btn__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    & h1 {
+        text-align: center;
+    }
+    
+    & button {
+        background-color: transparent;
+        border: 1px solid black;
+    }
+
+    & button:first-child {
+        border-radius: 12px;
+        grid-column: 1 / -1;
+        margin-top: 0.8em;
+        padding: 0.3em;
+    }
+
+    & button:first-child:hover {
+        background-color: var(--main-btn);
+        transition: background-color 0.4s;
+    }
+
+    & button:last-child {
+        border-radius: 30%;
+        position: absolute;
+        top: -12%;
+        right: 1%;
+    }
+
+    
+    & button:last-child:hover {
+        background-color: var(--delete-btn);
+        color: #fff;
+        transition: background-color 0.2s;
+    }
+    
+    & button:last-child::before {
+        content: 'X';
+        padding: 0 0.5em;
+    }
+    
+}
+
+#edit__book form button:last-child {
+    top: -15%;
+}
+
+::backdrop {
+    background-color: #000;
+    opacity: 0.5;
+}
