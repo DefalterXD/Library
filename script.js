@@ -84,6 +84,14 @@ Book.prototype = {
         bookCard.append(bookImg, bookInfoContainer, additionalInfoContainer, bookBtnContainer);
 
         mainDisplay.appendChild(bookCard);
+    },
+    bookStatus(status) {
+        if (status.textContent === 'not read') {
+            status.textContent = 'read';
+        }
+        else {
+            status.textContent = 'not read';
+        }
     }
 }
 
