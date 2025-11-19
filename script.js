@@ -1,6 +1,5 @@
 const mainDisplay = document.querySelector('.main__container');
 
-const addBookBtn = document.querySelector('.add__btn');
 const addBookModal = document.querySelector('#add__book');
 const editBookModal = document.querySelector('#edit__book');
 
