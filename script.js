@@ -180,10 +180,14 @@ document.addEventListener('click', (event) => {
 });
 
 
-addBook('https://thecomicmint.com/cdn/shop/files/STL357563_1024x.jpg?v=1738082380','Batman','Batman', 255, 'read');
+addBook('https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781625587534/the-picture-of-dorian-gray-9781625587534_hr.jpg', 'The Picture of Dorian Gray', 'Oscar Wilde', 169, false);
 
-addBook('./batman2.avif','Batman','Batman', 255, 'read');
+addBook('https://m.media-amazon.com/images/I/61n8wJYJcdL._AC_UF894,1000_QL80_.jpg', 'Moby-Dick', 'Herman Melville', 635, false);
 
-addBook('https://preview.redd.it/cover-batman-issue-1-variant-cover-by-nick-dragotta-v0-5wrk8za3gdqf1.jpeg?width=1080&crop=smart&auto=webp&s=16c96b14debfdf0eb585f570a5c561b3a3a7102c','Batman','Batman', 255, 'read');
+addBook('https://m.media-amazon.com/images/I/81W6BFaJJWL._AC_UF1000,1000_QL80_.jpg', 'War and Peace', 'Leo Tolstoy', 1296, false);
 
-displayBooks();
+addBook('https://cdn11.bigcommerce.com/s-aweq463/images/stencil/1280x1280/products/59565/149905/9781774021897-l-fa6218bac4ab--1-__14131.1750685772.jpg?c=2', 'Crime and Punishment', 'Fyodor Dostoevsky', 720, false);
+
+addBook('https://www.logobook.kz/make_nimage.php?uid=11049052', 'Fahrenheit 451', 'Ray Bradbury', 256, true);
+
+addBook('https://cdn11.bigcommerce.com/s-yzgoj/images/stencil/1280x1280/products/2002531/2929534/apixrrx0s__92759.1626522733.jpg?c=2', 'A Clockwork Orange', 'Anthony Burgess', 240, false);
