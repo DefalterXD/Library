@@ -5,6 +5,7 @@
 }
 
 body {
+    font-family: 'Arsenal SC', sans-serif;
     min-height: 100dvh;
     display: grid;
     grid-template-rows: 1fr;
