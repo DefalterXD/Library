@@ -22,7 +22,10 @@ const Book = function (src, name, author, pages, status) {
 Book.prototype = {
     createCard() {
         const bookInfoContainer = document.createElement('div');
-        const readerInfoContainer = document.createElement('div');
+        bookInfoContainer.classList.add('book__info');
+
+        const additionalInfoContainer = document.createElement('div');
+        additionalInfoContainer.classList.add('reader__info');
 
         const bookImg = document.createElement('img');
         const bookCard = document.createElement('div');
@@ -30,14 +33,28 @@ Book.prototype = {
         const bookAuthor = document.createElement('h4');
 
         const bookPagesContainer = document.createElement('div');
+        bookPagesContainer.classList.add('pages_info')
+
         const bookPagesTitle = document.createElement('p');
         const bookPages = document.createElement('p');
 
         const bookStatusContainer = document.createElement('div');
+        bookStatusContainer.classList.add('status__info')
+
         const bookStatusTitle = document.createElement('p');
         const bookStatus = document.createElement('p');
 
+        const bookStatusBtn = document.createElement('button');
+        bookStatusBtn.classList.add('status__btn');
+
+        const bookBtnContainer = document.createElement('div');
+        bookBtnContainer.classList.add('btn__container');
+
         const bookEditBtn = document.createElement('button');
+        bookEditBtn.classList.add('edit__btn');
+
+        const bookDeleteBtn = document.createElement('button');
+        bookDeleteBtn.classList.add('delete__btn');
 
         bookImg.src = this.src;
         bookTitle.textContent = this.name;
@@ -48,21 +65,23 @@ Book.prototype = {
 
         bookStatusTitle.textContent = 'Status:';
         bookStatus.textContent = this.status;
+        bookStatusBtn.textContent = 'Change Status';
 
         bookEditBtn.textContent = 'Edit';
-        
-        bookCard.id = this.id;
+        bookDeleteBtn.textContent = 'Delete';
+
+        bookCard.dataset.id = this.id;
         bookCard.classList.add('book__card');
-        bookInfoContainer.classList.add('book__info');
-        readerInfoContainer.classList.add('reader__info');
-        bookEditBtn.classList.add('edit__btn');
 
         bookInfoContainer.append(bookTitle, bookAuthor);
+
         bookPagesContainer.append(bookPagesTitle, bookPages);
         bookStatusContainer.append(bookStatusTitle, bookStatus);
-        readerInfoContainer.append(bookPagesContainer, bookStatusContainer);
+        additionalInfoContainer.append(bookPagesContainer, bookStatusContainer, bookStatusBtn);
 
-        bookCard.append(bookImg, bookInfoContainer, readerInfoContainer, bookEditBtn);
+        bookBtnContainer.append(bookEditBtn, bookDeleteBtn);
+
+        bookCard.append(bookImg, bookInfoContainer, additionalInfoContainer, bookBtnContainer);
 
         mainDisplay.appendChild(bookCard);
     }
