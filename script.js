@@ -1,8 +1,15 @@
 const mainDisplay = document.querySelector('.main__container');
+
+const addBookBtn = document.querySelector('.add__btn');
+const addBookModal = document.querySelector('#add__book');
+const editBookModal = document.querySelector('#edit__book');
+
+let bookCardEdit = '';
+
 const myLibrary = []
 
-const Book = function(src, name, author, pages, status) {
-    if(!new.target) {
+const Book = function (src, name, author, pages, status) {
+    if (!new.target) {
         throw Error("Use 'new' to create an object");
     }
     this.id = crypto.randomUUID();
