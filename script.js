@@ -95,7 +95,7 @@ Book.prototype = {
     }
 }
 
-const addBook = function addBookToTheLibrary(src, name, author, pages, status) {
+const addBook = function addBookToTheLibrary(src = 'placeholder.avif', name = 'Unknown', author = 'Unknown', pages = '0', status = false) {
     const newBook = new Book(src, name, `by ${author}`, `${pages} pages`, status);
     myLibrary.push(newBook);
 }
